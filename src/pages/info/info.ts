@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Item} from '../../providers/pedido-data/pedido';
+import {DisponibleDataProvider} from '../../providers/pedido-data/disponible-data'
 
-/**
- * Generated class for the InfoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +11,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InfoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  objDisponibles:Item[];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service: DisponibleDataProvider) {
+    this.objDisponibles=service.data;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InfoPage');
   }
 
+  openItem(item: Item) {
+    
+    
+  }
 }

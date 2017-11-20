@@ -11,6 +11,7 @@ import { PrincipalPage } from '../pages/principal/principal';
 import { PedidosPage } from '../pages/pedidos/pedidos';
 import { InfoPage } from '../pages/info/info';
 import { PedidoDataProvider } from '../providers/pedido-data/pedido-data';
+import { DisponibleDataProvider } from '../providers/pedido-data/disponible-data';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { PedidoDataProvider } from '../providers/pedido-data/pedido-data';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PedidoDataProvider,
-    PedidoDataProvider
+    DisponibleDataProvider,
   ]
 })
 export class AppModule {}
