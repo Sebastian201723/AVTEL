@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import {Item} from '../../providers/pedido-data/pedido';
 import {DisponibleDataProvider} from '../../providers/pedido-data/disponible-data'
 import {PrestadoDataProvider} from '../../providers/pedido-data/prestado-data';
+import {TabsPage} from '../tabs/tabs';
+import{InfoPage} from '../info/info'
 /**
  * Generated class for the SearchPage page.
  *
@@ -77,7 +79,7 @@ export class SearchPage {
     }else{
       this.showToast("Error en el proceso de prestado, intente de nuevo")
     }
-    this.navCtrl.setRoot('PrincipalPage'); 
+    this.navCtrl.setRoot(TabsPage); 
   }
 
   showToast(msg: string) {

@@ -10,6 +10,8 @@ import {TabsPage} from '../pages/tabs/tabs'
 import { PrincipalPage } from '../pages/principal/principal';
 import { PedidosPage } from '../pages/pedidos/pedidos';
 import { InfoPage } from '../pages/info/info';
+//import {SearchPage} from '../pages/search/search';
+//import {ItemDetailPage} from '../pages/item-detail/item-detail';
 import { PedidoDataProvider } from '../providers/pedido-data/pedido-data';
 import { DisponibleDataProvider } from '../providers/pedido-data/disponible-data';
 import { PrestadoDataProvider } from '../providers/pedido-data/prestado-data';
@@ -22,6 +24,8 @@ import { PrestadoDataProvider } from '../providers/pedido-data/prestado-data';
     PrincipalPage,
     PedidosPage,
     InfoPage,
+    //SearchPage,
+    //ItemDetailPage,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,8 @@ import { PrestadoDataProvider } from '../providers/pedido-data/prestado-data';
     InfoPage,
     PedidosPage,
     PrincipalPage,
+    //ItemDetailPage,
+    //SearchPage
   ],
   providers: [
     StatusBar,
