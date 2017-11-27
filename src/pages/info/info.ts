@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 import {Item} from '../../providers/pedido-data/pedido';
 import {DisponibleDataProvider} from '../../providers/pedido-data/disponible-data'
-
+//import {ItemDetailPage} from '../item-detail/item-detail';
 
 @IonicPage()
 @Component({
@@ -12,8 +12,9 @@ import {DisponibleDataProvider} from '../../providers/pedido-data/disponible-dat
 export class InfoPage {
 
 
-  objDisponibles:Item[];
-  constructor(public navCtrl: NavController, public navParams: NavParams, public service: DisponibleDataProvider) {
+  objDisponibles:Array<any>=[];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service: DisponibleDataProvider,
+  public nav:Nav) {
     this.objDisponibles=service.data;
   }
 
@@ -21,8 +22,10 @@ export class InfoPage {
     console.log('ionViewDidLoad InfoPage');
   }
 
-  openItem(item: Item) {
-    
-    
+  openItem(item: any) {
+    console.log(this.objDisponibles);
+    console.log(item);
+    this.nav.push('ItemDetailPage',{item:item});
+  
   }
 }

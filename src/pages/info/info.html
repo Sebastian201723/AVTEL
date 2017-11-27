@@ -11,15 +11,15 @@
 <ion-content padding class="perfil-bg">
   <p>Los siguientes son los objetos disponibles en el inventario:</p>
   <ion-list>
-      <ion-item-sliding *ngFor="let d of objDisponibles">
-        <button ion-item (click)="openItem(item)">
-          <ion-avatar item-start>
-            <img [src]="d.imagen" />
+      
+        <button ion-item *ngFor="let item of objDisponibles" (click)="openItem(item)">
+          <ion-avatar item-left>
+            <img [src]="item.imagen" />
           </ion-avatar>
-          <h2>{{d.nombre}}</h2>
-          <p>{{d.descripcion}}</p>
+          <h2>{{item.nombre}}</h2>
+          <p>{{item.descripcion}}</p>
         </button>
-      </ion-item-sliding>
+ 
     </ion-list>
 
 </ion-content>

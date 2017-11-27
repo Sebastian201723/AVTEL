@@ -4,4 +4,5 @@ export class Item{
     cantidad: number;
     imagen: String;
     usuario: String;
+    componentes:String;
 }

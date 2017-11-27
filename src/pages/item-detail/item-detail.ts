@@ -1,13 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {Item} from '../../providers/pedido-data/pedido';
-
-/**
- * Generated class for the ItemDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -15,14 +7,23 @@ import {Item} from '../../providers/pedido-data/pedido';
   templateUrl: 'item-detail.html',
 })
 export class ItemDetailPage {
-  item:any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public item : any={
+  
+  };
+  
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, nav:Nav) {
+    this.item = navParams.get('item');
     
-    this.item=this.navParams.get('item');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemDetailPage');
+  }
+
+  goToPedir(item:any){
+    this.navCtrl.push('SearchPage',{item:item});
+    console.log(item)
   }
 
 }

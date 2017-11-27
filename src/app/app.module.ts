@@ -12,6 +12,7 @@ import { PedidosPage } from '../pages/pedidos/pedidos';
 import { InfoPage } from '../pages/info/info';
 import { PedidoDataProvider } from '../providers/pedido-data/pedido-data';
 import { DisponibleDataProvider } from '../providers/pedido-data/disponible-data';
+import { PrestadoDataProvider } from '../providers/pedido-data/prestado-data';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { DisponibleDataProvider } from '../providers/pedido-data/disponible-data
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PedidoDataProvider,
     DisponibleDataProvider,
+    PrestadoDataProvider,
   ]
 })
 export class AppModule {}

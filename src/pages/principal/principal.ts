@@ -24,6 +24,6 @@ export class PrincipalPage {
   }
 
   logout(){
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.parent.parent.setRoot(HomePage);
   }
 }
