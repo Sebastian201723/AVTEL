@@ -69,6 +69,7 @@ export class SearchPage {
     if(vof){
       console.log("IMPORTANTE Retorno la nueva cantidad de objetos: ")
       console.log(vof)
+      this.service2.data.push(vof);
       this.showToast("Objeto prestado exitosamente")
     }else{
       this.showToast("Error en el proceso de prestado, intente de nuevo")

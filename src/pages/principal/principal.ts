@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import {DevolverPage} from '../devolver/devolver';
 
 /**
  * Generated class for the PrincipalPage page.
@@ -25,5 +26,8 @@ export class PrincipalPage {
 
   logout(){
     this.navCtrl.parent.parent.setRoot(HomePage);
+  }
+  gotoDevolver(){
+    this.navCtrl.push(DevolverPage)
   }
 }

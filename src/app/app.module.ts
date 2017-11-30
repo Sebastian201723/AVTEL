@@ -10,6 +10,7 @@ import {TabsPage} from '../pages/tabs/tabs'
 import { PrincipalPage } from '../pages/principal/principal';
 import { PedidosPage } from '../pages/pedidos/pedidos';
 import { InfoPage } from '../pages/info/info';
+import {DevolverPage} from '../pages/devolver/devolver';
 //import {SearchPage} from '../pages/search/search';
 //import {ItemDetailPage} from '../pages/item-detail/item-detail';
 import { PedidoDataProvider } from '../providers/pedido-data/pedido-data';
@@ -25,6 +26,7 @@ import { RegistroProvider } from '../providers/registro/registro';
     PrincipalPage,
     PedidosPage,
     InfoPage,
+    DevolverPage,
     //SearchPage,
     //ItemDetailPage,
   ],
@@ -40,6 +42,7 @@ import { RegistroProvider } from '../providers/registro/registro';
     InfoPage,
     PedidosPage,
     PrincipalPage,
+    DevolverPage,
     //ItemDetailPage,
     //SearchPage
   ],
