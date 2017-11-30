@@ -15,7 +15,8 @@ import { InfoPage } from '../pages/info/info';
 import { PedidoDataProvider } from '../providers/pedido-data/pedido-data';
 import { DisponibleDataProvider } from '../providers/pedido-data/disponible-data';
 import { PrestadoDataProvider } from '../providers/pedido-data/prestado-data';
-
+import { RegistroProvider } from '../providers/registro/registro';
+ 
 @NgModule({
   declarations: [
     MyApp,
@@ -49,6 +50,7 @@ import { PrestadoDataProvider } from '../providers/pedido-data/prestado-data';
     PedidoDataProvider,
     DisponibleDataProvider,
     PrestadoDataProvider,
+    RegistroProvider
   ]
 })
 export class AppModule {}

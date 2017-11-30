@@ -5,13 +5,6 @@ import {DisponibleDataProvider} from '../../providers/pedido-data/disponible-dat
 import {PrestadoDataProvider} from '../../providers/pedido-data/prestado-data';
 import {TabsPage} from '../tabs/tabs';
 import{InfoPage} from '../info/info'
-/**
- * Generated class for the SearchPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-search',
@@ -70,11 +63,12 @@ export class SearchPage {
     
     console.log(this.prestado);
     this.service2.asignarNombre(this.nombre,this.prestado); //tenog un objeto en el provider que le asigno el nombre de quien lo pidio
-    this.service2.cambiarDisponible(); //cambio el numero de muchos objeto s a uno solo que fue el que se pidio.
+    //this.service2.cambiarDisponible(); //cambio el numero de muchos objeto s a uno solo que fue el que se pidio.
+    //Retorno nuevo
     var vof=this.service.restarCantidad(this.prestado);
     if(vof){
-      console.log("entre al if")
-      console.log(this.service.data)
+      console.log("IMPORTANTE Retorno la nueva cantidad de objetos: ")
+      console.log(vof)
       this.showToast("Objeto prestado exitosamente")
     }else{
       this.showToast("Error en el proceso de prestado, intente de nuevo")

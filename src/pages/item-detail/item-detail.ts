@@ -10,8 +10,6 @@ export class ItemDetailPage {
   public item : any={
   
   };
-  
-
   constructor(public navCtrl: NavController, public navParams: NavParams, nav:Nav) {
     this.item = navParams.get('item');
     

@@ -16,19 +16,19 @@ export class DisponibleDataProvider {
 
     constructor(){}
 
-    restarCantidad(obj:any):Boolean{
+    restarCantidad(obj:any):Item{
         var index=this.data.indexOf(obj);
+        console.log("El index del obj seleccionado es: "+index)
         if (index>-1){
             var nuevo=this.data[index];
             console.log("este es el objeto al que le voy a restar la cantidad")
             console.log(nuevo)
             nuevo.cantidad=nuevo.cantidad-1;
-            console.log("ya le reste la cantidad")
+            console.log("ya le reste la cantidad: ")
             console.log(nuevo)
-            this.data.splice(index,1,nuevo);
-            return true;
-        }else{
-            return false;
+            this.data.splice(index,1);
+            this.data.push(nuevo);
+            return nuevo;
         }
           }
 }
